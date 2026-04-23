@@ -4,8 +4,24 @@ namespace App\Controllers;
 
 class Home extends BaseController
 {
-    public function index(): string
+    public function index()
     {
-        return view('v_home');
+        return view('home', [
+            'title' => 'Dashboard'
+        ]);
+    }
+
+    public function produk()
+    {
+        return view('home', [
+            'title' => 'Halaman Produk'
+        ]);
+    }
+
+    public function keranjang()
+    {
+        return view('home', [
+            'title' => 'Keranjang'
+        ]);
     }
 }

@@ -1,10 +1,18 @@
 <?php
 
-use CodeIgniter\Router\RouteCollection;
+namespace Config;
 
-/**
- * @var RouteCollection $routes
- */
+$routes = Services::routes();
+
+// Default setup
+$routes->setDefaultNamespace('App\Controllers');
+$routes->setDefaultController('Home');
+$routes->setDefaultMethod('index');
+$routes->setTranslateURIDashes(false);
+$routes->set404Override();
+$routes->setAutoRoute(true);
+
+// ROUTES KAMU
 $routes->get('/', 'Home::index');
-$routes->get('/produk', 'ProdukController::index');
-$routes->get('/keranjang', 'TransaksiController::index');
+$routes->get('produk', 'Home::produk');
+$routes->get('keranjang', 'Home::keranjang');
