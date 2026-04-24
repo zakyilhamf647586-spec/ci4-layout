@@ -21,4 +21,8 @@
 
 </div>
 
+<!-- 🔥 SCRIPT WAJIB DI SINI -->
 <?= $this->include('layout/script') ?>
+
+</body>
+</html>
