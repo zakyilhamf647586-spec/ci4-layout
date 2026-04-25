@@ -1,5 +1,6 @@
 <?= $this->include('layout/head') ?>
 
+
 <div id="wrapper">
 
     <?= $this->include('layout/sidebar') ?>
@@ -22,3 +23,6 @@
 </div>
 
 <?= $this->include('layout/script') ?>
+
+</body>
+</html>
