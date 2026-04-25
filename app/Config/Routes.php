@@ -9,12 +9,14 @@ $routes->setDefaultController('Home');
 $routes->setDefaultMethod('index');
 $routes->setTranslateURIDashes(false);
 $routes->set404Override();
-$routes->setAutoRoute(true);
+$routes->setAutoRoute(false);
 
-$routes->get('/', 'Home::index');
-$routes->get('produk', 'Home::produk');
-$routes->get('keranjang', 'Home::keranjang');
-
+$routes->get('/', 'Home::index', ['filter' => 'auth']);
 $routes->get('login', 'AuthController::login');
 $routes->post('login', 'AuthController::login');
 $routes->get('logout', 'AuthController::logout');
+
+$routes->get('keranjang', 'TransaksiController::index', ['filter' => 'auth']);
+$routes->get('produk', 'ProdukController::index', ['filter' => 'auth']);
+
+

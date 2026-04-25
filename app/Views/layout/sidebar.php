@@ -7,15 +7,8 @@
 
     <li class="nav-item <?= uri_string() === '' ? 'active' : '' ?>">
         <a class="nav-link" href="<?= base_url('/') ?>">
-            <i class="fas fa-fw fa-tachometer-alt"></i>
-            <span>Dashboard</span>
-        </a>
-    </li>
-
-    <li class="nav-item <?= uri_string() === 'produk' ? 'active' : '' ?>">
-        <a class="nav-link" href="<?= base_url('produk') ?>">
-            <i class="fas fa-box"></i>
-            <span>Produk</span>
+            <i class="fas fa-fw fa-home"></i>
+            <span>Home</span>
         </a>
     </li>
 
@@ -23,6 +16,13 @@
         <a class="nav-link" href="<?= base_url('keranjang') ?>">
             <i class="fas fa-shopping-cart"></i>
             <span>Keranjang</span>
+        </a>
+    </li>
+
+    <li class="nav-item <?= uri_string() === 'produk' ? 'active' : '' ?>">
+        <a class="nav-link" href="<?= base_url('produk') ?>">
+            <i class="fas fa-box"></i>
+            <span>Produk</span>
         </a>
     </li>
 </ul>

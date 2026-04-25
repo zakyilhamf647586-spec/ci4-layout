@@ -12,9 +12,9 @@
                     <p class="text-muted small mb-0">Enter your username & password to login</p>
                 </div>
 
-                <?php if (session()->getFlashdata('failed')) : ?>
+                <?php if ($failed = session()->getFlashdata('failed')) : ?>
                     <div class="alert alert-danger text-center" role="alert">
-                        <?= session()->getFlashdata('failed') ?>
+                        <?= esc($failed) ?>
                     </div>
                 <?php endif; ?>
 

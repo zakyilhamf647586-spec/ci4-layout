@@ -10,18 +10,4 @@ class Home extends BaseController
             'title' => 'Home',
         ]);
     }
-
-    public function produk()
-    {
-        return view('v_produk', [
-            'title' => 'Produk',
-        ]);
-    }
-
-    public function keranjang()
-    {
-        return view('v_keranjang', [
-            'title' => 'Keranjang',
-        ]);
-    }
 }
