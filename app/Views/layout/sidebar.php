@@ -7,8 +7,15 @@
 
     <li class="nav-item <?= uri_string() === '' ? 'active' : '' ?>">
         <a class="nav-link" href="<?= base_url('/') ?>">
-            <i class="fas fa-fw fa-tachometer-alt"></i>
-            <span>Dashboard</span>
+            <i class="fas fa-fw fa-home"></i>
+            <span>Home</span>
+        </a>
+    </li>
+
+    <li class="nav-item <?= uri_string() === 'keranjang' ? 'active' : '' ?>">
+        <a class="nav-link" href="<?= base_url('keranjang') ?>">
+            <i class="fas fa-shopping-cart"></i>
+            <span>Keranjang</span>
         </a>
     </li>
 
@@ -19,10 +26,10 @@
         </a>
     </li>
 
-    <li class="nav-item <?= uri_string() === 'keranjang' ? 'active' : '' ?>">
-        <a class="nav-link" href="<?= base_url('keranjang') ?>">
-            <i class="fas fa-shopping-cart"></i>
-            <span>Keranjang</span>
+    <li class="nav-item <?= uri_string() === 'profile' ? 'active' : '' ?>">
+        <a class="nav-link" href="<?= base_url('profile') ?>">
+            <i class="fas fa-user"></i>
+            <span>Profile</span>
         </a>
     </li>
 </ul>

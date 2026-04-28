@@ -2,6 +2,8 @@
 
 namespace App\Controllers;
 
+use CodeIgniter\I18n\Time;
+
 class AuthController extends BaseController
 {
     public function __construct()
@@ -19,6 +21,7 @@ class AuthController extends BaseController
                 'username' => 'april',
                 'password' => md5('123'),
                 'role'     => 'admin',
+                'email'    => 'april@example.com',
             ];
 
             if ($username !== $dataUser['username']) {
@@ -34,6 +37,8 @@ class AuthController extends BaseController
             session()->set([
                 'username'   => $dataUser['username'],
                 'role'       => $dataUser['role'],
+                'email'      => $dataUser['email'],
+                'login_time' => Time::now('Asia/Jakarta')->toDateTimeString(),
                 'isLoggedIn' => true,
             ]);
 

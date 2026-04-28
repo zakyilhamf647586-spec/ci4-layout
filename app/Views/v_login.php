@@ -12,9 +12,10 @@
                     <p class="text-muted small mb-0">Enter your username & password to login</p>
                 </div>
 
-                <?php if (session()->getFlashdata('failed')) : ?>
+                <?php $failed = session()->getFlashdata('failed'); ?>
+                <?php if ($failed) : ?>
                     <div class="alert alert-danger text-center" role="alert">
-                        <?= session()->getFlashdata('failed') ?>
+                        <?= esc($failed) ?>
                     </div>
                 <?php endif; ?>
 
@@ -37,7 +38,6 @@
                 ?>
 
                 <?= form_open('login', ['class' => 'user']) ?>
-
                     <div class="form-group">
                         <?= form_label('Username', 'username', ['class' => 'form-label']) ?>
                         <?= form_input($username) ?>
@@ -51,7 +51,6 @@
                     <div class="form-group">
                         <?= form_submit('submit', 'Login', ['class' => 'btn btn-primary btn-user btn-block']) ?>
                     </div>
-
                 <?= form_close() ?>
 
                 <hr>
